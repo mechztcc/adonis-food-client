@@ -1,6 +1,7 @@
-import { DateTime } from 'luxon'
-import { BaseModel, beforeSave, column } from '@ioc:Adonis/Lucid/Orm'
 import Hash from '@ioc:Adonis/Core/Hash'
+import { BaseModel, beforeSave, column, hasMany, HasMany } from '@ioc:Adonis/Lucid/Orm'
+import { DateTime } from 'luxon'
+import Address from './Address'
 
 export default class User extends BaseModel {
   @column({ isPrimary: true })
@@ -17,6 +18,9 @@ export default class User extends BaseModel {
 
   @column()
   public apiToken?: string
+
+  @hasMany(() => Address)
+  public address: HasMany<typeof Address>
 
   @column.dateTime({ autoCreate: true })
   public createdAt: DateTime

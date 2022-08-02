@@ -5,7 +5,8 @@
  * file.
  */
 
-import users from 'App/Models/users'
+import User from 'App/Models/User'
+import users from 'App/Models/User'
 
 declare module '@ioc:Adonis/Addons/Auth' {
   /*
@@ -34,8 +35,8 @@ declare module '@ioc:Adonis/Addons/Auth' {
     |
     */
     user: {
-      implementation: LucidProviderContract<typeof users>
-      config: LucidProviderConfig<typeof users>
+      implementation: LucidProviderContract<typeof User>
+      config: LucidProviderConfig<typeof User>
     }
   }
 
@@ -44,7 +45,7 @@ declare module '@ioc:Adonis/Addons/Auth' {
   | Guards
   |--------------------------------------------------------------------------
   |
-  | The guards are used for authenticating users using different drivers.
+  | The guards are used for authenticating User using different drivers.
   | The auth module comes with 3 different guards.
   |
   | - SessionGuardContract
