@@ -22,4 +22,5 @@ test.group('Users users', () => {
     response.assertBodyContains({ errors: [] })
     response.assertStatus(422)
   })
+
 })
