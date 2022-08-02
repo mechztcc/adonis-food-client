@@ -9,7 +9,8 @@
 [X] Create Sessions
 
 -- Address --
-[ ] Create relations between User 1 -> N Address
-[ ] Create Address
+[X] Create relations between User 1 -> N Address
+[X] Create Address
 [ ] Update Address
+[ ] List all by logged user
 
