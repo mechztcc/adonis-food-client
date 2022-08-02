@@ -9,7 +9,7 @@ export default class SessionsController {
 
     const user = await User.findBy('phone', payload.phone)
     if (!user) {
-      throw new BadRequestException('User not found with this phone number', 409)
+      throw new BadRequestException('User not found with this phone number', 404)
     }
 
     const token = await auth
