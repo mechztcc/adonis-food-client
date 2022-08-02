@@ -23,6 +23,9 @@ export default class Address extends BaseModel {
   @column()
   public obs: string
 
+  @column()
+  public userId: number;
+
   @column.dateTime({ autoCreate: true })
   public createdAt: DateTime
 
