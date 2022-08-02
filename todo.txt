@@ -1,0 +1,15 @@
+
+
+-- User --
+[X] Create User
+[ ] Update name
+[ ] Remind password
+
+-- Sessions --
+[X] Create Sessions
+
+-- Address --
+[ ] Create relations between User 1 -> N Address
+[ ] Create Address
+[ ] Update Address
+
