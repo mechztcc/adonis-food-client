@@ -10,7 +10,6 @@ test.group('Users users', () => {
     response.assertBodyContains({
       name: 'Alberto Paiva',
       phone: '55 9 9999-9999',
-      password: '123456',
     })
   })
 

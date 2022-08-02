@@ -16,6 +16,6 @@ export default class SessionsController {
       .use('api')
       .attempt(payload.phone, payload.password, { expiresIn: '2hours' })
 
-    return response.accepted({ user, token })
+    return response.created({ user, token })
   }
 }
