@@ -1,6 +1,6 @@
 
 
--- User --
+-- Users --
 [X] Create User
 [ ] Update name
 [ ] Remind password
@@ -13,4 +13,7 @@
 [X] Create Address
 [ ] Update Address
 [X] List all by logged user
+
+-- Stores --
+[ ] List stores
 
