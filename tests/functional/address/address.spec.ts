@@ -41,4 +41,13 @@ test.group('Address address', () => {
       errors: [{ message: 'E_UNAUTHORIZED_ACCESS: Unauthorized access' }],
     })
   })
+
+  test('It should be  return all addresses by logged user', async ({ client }) => {
+    const user = await UserFactory.merge({ password: '123456' }).create()
+
+    const response = await client.get('/addresses').loginAs(user)
+    console.log(response);
+
+    
+  })
 })
