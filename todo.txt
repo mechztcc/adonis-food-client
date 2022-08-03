@@ -12,5 +12,5 @@
 [X] Create relations between User 1 -> N Address
 [X] Create Address
 [ ] Update Address
-[ ] List all by logged user
+[X] List all by logged user
 

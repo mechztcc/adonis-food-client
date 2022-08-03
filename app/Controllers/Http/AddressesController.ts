@@ -12,11 +12,19 @@ export default class AddressesController {
       number: payload.number,
       state: payload.state,
       street: payload.street,
-			complement: payload.complement,
-			obs: payload.obs,
-			userId: user?.$attributes.id
+      complement: payload.complement,
+      obs: payload.obs,
+      userId: user?.$attributes.id,
     })
 
     return response.created(address)
+  }
+
+  public async findByLoggedUser({ response, auth }: HttpContextContract) {
+    const user = auth.user
+
+    const addresses = await Address.findBy('user_id', user?.id)
+
+    return response.ok(addresses)
   }
 }

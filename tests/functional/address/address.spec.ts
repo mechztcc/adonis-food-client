@@ -46,8 +46,17 @@ test.group('Address address', () => {
     const user = await UserFactory.merge({ password: '123456' }).create()
 
     const response = await client.get('/addresses').loginAs(user)
-    console.log(response);
+    response.assertStatus(200)
+  })
 
-    
+  test('It should be return 401 when try to find address with no auth token provided', async ({
+    client,
+  }) => {
+    const response = await client.get('/addresses')
+
+    response.assertStatus(401)
+    response.assertBodyContains({
+      errors: [{ message: 'E_UNAUTHORIZED_ACCESS: Unauthorized access' }],
+    })
   })
 })
