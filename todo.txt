@@ -15,7 +15,7 @@
 [X] List all by logged user
 
 -- Stores --
-[ ] List stores
+[X] List stores
 
 
 -- Deploy --
