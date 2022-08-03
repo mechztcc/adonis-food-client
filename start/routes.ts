@@ -1,10 +1,8 @@
 import Route from '@ioc:Adonis/Core/Route'
 
-import './users/users.routes'
-import './sessions/sessions.routes'
 import './addresses/addresses.routes'
+import './sessions/sessions.routes'
 import './stores/stores.routes'
+import './users/users.routes'
 
-Route.get('/', async () => {
-  return { hello: 'world' }
-})
+Route.get('/check', 'ApiController.check')

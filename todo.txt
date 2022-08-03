@@ -17,3 +17,7 @@
 -- Stores --
 [ ] List stores
 
+
+-- Deploy --
+[X] Check health status
+
