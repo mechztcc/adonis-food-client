@@ -17,7 +17,14 @@
 -- Stores --
 [X] List stores
 
+-- Category --
+[ ] List all by Store
+
+-- Product --
+[ ] List all by Category
+
 
 -- Deploy --
 [X] Check health status
+[ ] Prepare image docker
 
