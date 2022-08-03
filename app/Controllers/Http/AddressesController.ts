@@ -17,6 +17,6 @@ export default class AddressesController {
 			userId: user?.$attributes.id
     })
 
-    return response.accepted(address)
+    return response.created(address)
   }
 }

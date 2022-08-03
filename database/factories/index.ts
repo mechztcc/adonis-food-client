@@ -8,3 +8,4 @@ export const UserFactory = Factory.define(User, ({ faker }) => {
     password: faker.internet.password(),
   }
 }).build()
+
