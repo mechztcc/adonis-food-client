@@ -19,4 +19,26 @@ test.group('Address address', () => {
     response.assertStatus(201)
     response.assertBodyContains({ id: 1 })
   })
+
+  test('It should be return 401 when try to create address with no auth token provider', async ({
+    client,
+  }) => {
+    const user = await UserFactory.merge({ password: '123456' }).create()
+
+    const address = {
+      zip: '54322',
+      number: '23',
+      state: 'PE',
+      street: 'Av. br 255',
+      complement: 'APT',
+      obs: 'come fast',
+    }
+
+    const response = await client.post('/addresses').json(address)
+
+    response.assertStatus(401)
+    response.assertBodyContains({
+      errors: [{ message: 'E_UNAUTHORIZED_ACCESS: Unauthorized access' }],
+    })
+  })
 })
